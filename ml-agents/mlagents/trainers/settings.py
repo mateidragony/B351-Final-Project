@@ -718,6 +718,9 @@ class TrainerSettings(ExportableSettings):
             #     if val:
             #         d_copy["checkpoint_interval"] = int(d_copy["max_steps"] / d_copy["keep_checkpoints"])
             elif key == "trainer_type":
+                print("++++++++++++++++++++++++++++++++++")
+                print(all_trainer_types.keys())
+                print("++++++++++++++++++++++++++++++++++")
                 if val not in all_trainer_types.keys():
                     raise TrainerConfigError(f"Invalid trainer type {val} was found")
             else:

@@ -9,6 +9,8 @@ from mlagents.trainers.ppo.optimizer_torch import PPOSettings
 from mlagents.trainers.ppo.trainer import PPOTrainer
 from mlagents.trainers.sac.optimizer_torch import SACSettings
 from mlagents.trainers.sac.trainer import SACTrainer
+from mlagents.trainers.poca2test.optimizer_torch import POCA2TestSettings
+from mlagents.trainers.poca2test.trainer import POCA2TestTrainer
 from mlagents_envs import logging_util
 
 logger = logging_util.get_logger(__name__)
@@ -24,6 +26,7 @@ def get_default_trainer_types() -> Tuple[Dict[str, Any], Dict[str, Any]]:
             PPOTrainer.get_trainer_name(): PPOTrainer,
             SACTrainer.get_trainer_name(): SACTrainer,
             POCATrainer.get_trainer_name(): POCATrainer,
+            POCA2TestTrainer.get_trainer_name(): POCA2TestTrainer,
         }
     )
     # global all_trainer_settings
@@ -32,6 +35,7 @@ def get_default_trainer_types() -> Tuple[Dict[str, Any], Dict[str, Any]]:
             PPOTrainer.get_trainer_name(): PPOSettings,
             SACTrainer.get_trainer_name(): SACSettings,
             POCATrainer.get_trainer_name(): POCASettings,
+            POCA2TestTrainer.get_trainer_name(): POCA2TestSettings,
         }
     )
 

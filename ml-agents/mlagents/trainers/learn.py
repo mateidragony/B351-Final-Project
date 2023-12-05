@@ -51,8 +51,12 @@ def get_version_string() -> str:
 def parse_command_line(
     argv: Optional[List[str]] = None,
 ) -> RunOptions:
-    _, _ = register_trainer_plugins()
+    _, _ = register_trainer_plugins() 
+    print("++++++++++++++++++++++++++")
+    print("argv: ",argv)
     args = parser.parse_args(argv)
+    print("args: ", args)
+    print("++++++++++++++++++++++++++")
     return RunOptions.from_argparse(args)
 
 
@@ -215,7 +219,7 @@ def run_cli(options: RunOptions) -> None:
  ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
  ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
  ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
- ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣ sd sd sd
  ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
  ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
  ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
@@ -233,8 +237,12 @@ def run_cli(options: RunOptions) -> None:
         log_level = logging_util.DEBUG
     else:
         log_level = logging_util.INFO
+        
+    print("Here")
 
-    logging_util.set_log_level(log_level)
+    logging_util.set_log_level(log_level)     
+    
+    print("Here now")  
 
     logger.debug("Configuration for this run:")
     logger.debug(json.dumps(options.as_dict(), indent=4))
