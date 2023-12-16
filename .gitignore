@@ -1,5 +1,3 @@
-.gitignore
-
 # Output Artifacts (Legacy)
 /models
 /summaries

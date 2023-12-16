@@ -1,0 +1,65 @@
+{
+    "JumperBall": {
+        "checkpoints": [
+            {
+                "steps": 499999,
+                "file_path": "results\\JumperBallPPO\\JumperBall\\JumperBall-499999.onnx",
+                "reward": 1.0,
+                "creation_time": 1701813481.4036176,
+                "auxillary_file_paths": [
+                    "results\\JumperBallPPO\\JumperBall\\JumperBall-499999.pt"
+                ]
+            },
+            {
+                "steps": 500007,
+                "file_path": "results\\JumperBallPPO\\JumperBall\\JumperBall-500007.onnx",
+                "reward": 1.0,
+                "creation_time": 1701813481.4601848,
+                "auxillary_file_paths": [
+                    "results\\JumperBallPPO\\JumperBall\\JumperBall-500007.pt"
+                ]
+            },
+            {
+                "steps": 999999,
+                "file_path": "results\\JumperBallPPO\\JumperBall\\JumperBall-999999.onnx",
+                "reward": 0.75,
+                "creation_time": 1701824164.9813464,
+                "auxillary_file_paths": [
+                    "results\\JumperBallPPO\\JumperBall\\JumperBall-999999.pt"
+                ]
+            },
+            {
+                "steps": 1000006,
+                "file_path": "results\\JumperBallPPO\\JumperBall\\JumperBall-1000006.onnx",
+                "reward": 0.7647058823529411,
+                "creation_time": 1701824165.106296,
+                "auxillary_file_paths": [
+                    "results\\JumperBallPPO\\JumperBall\\JumperBall-1000006.pt"
+                ]
+            },
+            {
+                "steps": 1229527,
+                "file_path": "results\\JumperBallPPO\\JumperBall\\JumperBall-1229527.onnx",
+                "reward": 0.8571428571428571,
+                "creation_time": 1701829220.7391734,
+                "auxillary_file_paths": [
+                    "results\\JumperBallPPO\\JumperBall\\JumperBall-1229527.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1229527,
+            "file_path": "results\\JumperBallPPO\\JumperBall.onnx",
+            "reward": 0.8571428571428571,
+            "creation_time": 1701829220.7391734,
+            "auxillary_file_paths": [
+                "results\\JumperBallPPO\\JumperBall\\JumperBall-1229527.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0.dev0",
+        "torch_version": "2.1.1+cpu"
+    }
+}
